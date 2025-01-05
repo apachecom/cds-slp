@@ -55,22 +55,24 @@ if(!SOURCES)
     message(FATAL_ERROR "No se encontraron archivos fuente en src/")
 endif()
 
-# Define la biblioteca estática "cds"
-add_library(cds STATIC ${SOURCES})
+# Define la biblioteca estática "slp"
+add_library(slp STATIC ${SOURCES})
+
+add_library(slp::slp ALIAS slp) 
 
 # Configura directorios de encabezados para la biblioteca
-target_include_directories(cds PUBLIC include/static/bitsequence)
-target_include_directories(cds PUBLIC include/static/coders)
-target_include_directories(cds PUBLIC include/static/mapper)
-target_include_directories(cds PUBLIC include/static/permutation)
-target_include_directories(cds PUBLIC include/static/sequence)
-target_include_directories(cds PUBLIC include/static/suffixtree)
-target_include_directories(cds PUBLIC include/utils)
-target_include_directories(cds PUBLIC include/slp)
-target_include_directories(cds PUBLIC include/slp/BinRel)
-target_include_directories(cds PUBLIC include/slp/RePair)
-target_include_directories(cds PUBLIC include/slp/Samplings)
-target_include_directories(cds PUBLIC include/slp/Utils)
+target_include_directories(slp PUBLIC include/static/bitsequence)
+target_include_directories(slp PUBLIC include/static/coders)
+target_include_directories(slp PUBLIC include/static/mapper)
+target_include_directories(slp PUBLIC include/static/permutation)
+target_include_directories(slp PUBLIC include/static/sequence)
+target_include_directories(slp PUBLIC include/static/suffixtree)
+target_include_directories(slp PUBLIC include/utils)
+target_include_directories(slp PUBLIC include/slp)
+target_include_directories(slp PUBLIC include/slp/BinRel)
+target_include_directories(slp PUBLIC include/slp/RePair)
+target_include_directories(slp PUBLIC include/slp/Samplings)
+target_include_directories(slp PUBLIC include/slp/Utils)
 
 
 # Build benchmarks
@@ -86,7 +88,7 @@ add_link_options(LINKER:--as-needed)
 
 
 # Configuración de instalación
-install(TARGETS cds ARCHIVE DESTINATION lib)
+install(TARGETS slp ARCHIVE DESTINATION lib)
 install(DIRECTORY include/ DESTINATION include)
 
 # Habilita pruebas si es necesario
@@ -99,10 +101,11 @@ if(ENABLE_TESTS)
     foreach(TEST_SOURCE ${TEST_SOURCES})
         get_filename_component(TEST_NAME ${TEST_SOURCE} NAME_WE)
         add_executable(${TEST_NAME} ${TEST_SOURCE})
-        target_link_libraries(${TEST_NAME} cds)
+        target_link_libraries(${TEST_NAME} slp)
         add_test(NAME ${TEST_NAME} COMMAND ${TEST_NAME})
     endforeach()
 endif()
+
 
 
 # Define un ejecutable para el benchmark de construcción del índice
