@@ -20,13 +20,13 @@ set(CMAKE_MODULE_PATH
 # Guard against in-source builds and bad build-type strings
 include(ConfigSafeGuards)
 
-find_package(benchmark 1.6)
+# find_package(benchmark 1.6)
 
-if (NOT benchmark_FOUND)
-    include(ConfigGBench)
-endif ()
+# if (NOT benchmark_FOUND)
+#     include(ConfigGBench)
+# endif ()
 
-list(APPEND LIBS benchmark::benchmark benchmark::benchmark_main)
+# list(APPEND LIBS benchmark::benchmark benchmark::benchmark_main)
 
 # Encuentra todos los archivos fuente en src
 file(GLOB_RECURSE SOURCES
@@ -106,10 +106,10 @@ endif()
 
 
 # Define un ejecutable para el benchmark de construcción del índice
-add_executable(build_indice benchmarks/build_indice.cpp)
+# add_executable(build_indice benchmarks/build_indice.cpp)
 
 # Vincula el ejecutable con las bibliotecas necesarias
-target_link_libraries(build_indice PRIVATE cds ${LIBS})
+# target_link_libraries(build_indice PRIVATE cds ${LIBS})
 
 # Configura directorios de encabezados para el ejecutable
-target_include_directories(build_indice PRIVATE include)
+# target_include_directories(build_indice PRIVATE include)
