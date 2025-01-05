@@ -30,8 +30,8 @@
 #include <sys/time.h>
 #include <sys/types.h> 
 
-#include "RePairSLPIndex.h"
-#include "Utils/offsets.h"
+#include <RePairSLPIndex.h>
+#include <Utils/offsets.h>
 
 #define GET_TIME_DIVIDER ((double) 1.0 )	 //getTime deals with "seconds" as time unit.
 #define GET_TIME_UNIT "sec"

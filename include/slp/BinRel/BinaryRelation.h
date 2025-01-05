@@ -36,8 +36,8 @@
 #include <Mapper.h>
 #include <WaveletTreeNoptrs.h>
 
-#include "Point.h"
-#include "UtilsBinRel.h"
+#include <Point.h>
+#include <UtilsBinRel.h>
 
 using namespace cds_utils;
 
@@ -129,6 +129,6 @@ namespace cds_static
 	};
 };
 
-#include "LabeledBinaryRelation.h"
+#include <LabeledBinaryRelation.h>
 
 #endif  /* _BINARYRELATION_H */

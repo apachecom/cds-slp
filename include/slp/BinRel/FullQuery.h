@@ -26,7 +26,7 @@
 #ifndef _FULLQUERY_H
 #define _FULLQUERY_H
 
-#include "UtilsBinRel.h"
+#include <UtilsBinRel.h>
 
 namespace cds_static
 {

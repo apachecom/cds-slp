@@ -27,8 +27,8 @@
 #ifndef SAMPLING_H
 #define SAMPLING_H
 
-#include "../Utils/deltacodes.h"
-#include "CSD.h"
+#include <../Utils/deltacodes.h>
+#include <CSD.h>
 
 using namespace std;
 #include <fstream>

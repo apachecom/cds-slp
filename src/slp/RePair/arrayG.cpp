@@ -26,8 +26,8 @@ Chile. Blanco Encalada 2120, Santiago, Chile. gnavarro@dcc.uchile.cl
 	// extendible array for pairs
 
 #include <stdlib.h>
-#include "arrayG.h"
-#include "records.h"
+#include <arrayG.h>
+#include <records.h>
 
 int 
 ArrayG::insertArray (Tarray *A, int pair)

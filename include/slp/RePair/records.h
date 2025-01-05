@@ -29,7 +29,7 @@ Chile. Blanco Encalada 2120, Santiago, Chile. gnavarro@dcc.uchile.cl
 #ifndef RECORDSINCLUDED
 #define RECORDSINCLUDED
 
-#include "basics.h"
+#include <basics.h>
 
 typedef struct
    { int prev,next;
@@ -54,8 +54,8 @@ typedef struct
      void *List; // Tlist *
    } Trarray;
 
-#include "heap.h"
-#include "hash.h"
+#include <heap.h>
+#include <hash.h>
 
 // contents can be accessed as Rec.records[0..Rec.size-1]
 class Records

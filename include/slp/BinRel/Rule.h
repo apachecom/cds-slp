@@ -27,7 +27,7 @@
 #ifndef _RULE_H
 #define _RULE_H
 
-#include "Point.h"
+#include <Point.h>
 
 namespace cds_static
 {

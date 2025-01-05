@@ -31,7 +31,7 @@
  *   Miguel A. Martinez-Prieto:  migumar2@infor.uva.es
  */
 
-#include "CSD.h"
+#include <CSD.h>
 
 namespace csd
 {

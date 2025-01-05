@@ -30,7 +30,7 @@ Chile. Blanco Encalada 2120, Santiago, Chile. gnavarro@dcc.uchile.cl
 #define DICTIONARYINCLUDED
 
 #include <stdio.h>
-#include "basics.h"
+#include <basics.h>
 
 typedef struct
    { Tpair rule; // left and righ component

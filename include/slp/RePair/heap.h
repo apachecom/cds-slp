@@ -34,9 +34,9 @@ Chile. Blanco Encalada 2120, Santiago, Chile. gnavarro@dcc.uchile.cl
 #define HEAPINCLUDED
 
 #include <stdlib.h>
-#include "basics.h"
-#include "arrayG.h"
-#include "records.h"
+#include <basics.h>
+#include <arrayG.h>
+#include <records.h>
 
 typedef struct 
   { int freq;

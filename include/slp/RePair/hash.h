@@ -29,8 +29,8 @@ Chile. Blanco Encalada 2120, Santiago, Chile. gnavarro@dcc.uchile.cl
 #ifndef HASHINCLUDED
 #define HASHINCLUDED
 
-#include "basics.h"
-#include "records.h"
+#include <basics.h>
+#include <records.h>
 
 // 1/extra space overhead; set closer to 1 for smaller and slower execution
 static const float factor = 0.75; 

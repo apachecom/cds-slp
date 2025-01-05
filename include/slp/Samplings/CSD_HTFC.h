@@ -39,9 +39,9 @@ using namespace std;
 #include <libcdsBasics.h>
 using namespace cds_utils;
 
-#include "CSD.h"
-#include "VByte2.h"
-#include "hutucker2.h"
+#include <CSD.h>
+#include <VByte2.h>
+#include <hutucker2.h>
 
 namespace csd
 {

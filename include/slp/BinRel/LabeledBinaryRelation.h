@@ -32,8 +32,8 @@
 
 #include <algorithm>
 #include <cstring>
-#include "BinaryRelation.h"
-#include "Occ.h"
+#include <BinaryRelation.h>
+#include <Occ.h>
 
 using namespace cds_utils;
 using namespace std;

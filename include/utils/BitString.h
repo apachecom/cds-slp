@@ -23,7 +23,7 @@
 #define BITSTRING_H
 
 #include <vector>
-#include "libcdsBasics.h"
+#include <libcdsBasics.h>
 
 using namespace std;
 

@@ -37,11 +37,11 @@ Chile. Blanco Encalada 2120, Santiago, Chile. gnavarro@dcc.uchile.cl
 
 #include <iostream>
 
-#include "basics.h"
-#include "records.h"
-#include "hash.h"
-#include "heap.h"
-#include "dictionary.h"
+#include <basics.h>
+#include <records.h>
+#include <hash.h>
+#include <heap.h>
+#include <dictionary.h>
 
 #define MINSIZE 256
 

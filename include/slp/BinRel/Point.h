@@ -83,6 +83,6 @@ namespace cds_static
 	};
 };
 
-#include "Rule.h"
+#include <Rule.h>
 
 #endif  /* _POINT_H */

@@ -27,7 +27,7 @@
 #ifndef HUTUCKER2_H_INCLUDED
 #define HUTUCKER2_H_INCLUDED
 
-#include "binarynode.h"
+#include <binarynode.h>
 
 using namespace std;
 

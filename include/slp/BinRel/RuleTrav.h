@@ -23,7 +23,7 @@
  *   Miguel A Martinez-Prieto:  migumar2@infor.uva.es
  */
 
-#include "Rule.h"
+#include <Rule.h>
 
 #ifndef _RULETRAV_H
 #define _RULETRAV_H

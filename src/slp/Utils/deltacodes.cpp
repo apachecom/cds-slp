@@ -22,7 +22,7 @@
 #include <iostream>
 #include <algorithm>
 #include <iostream>
-#include "deltacodes.h"
+#include <deltacodes.h>
 
 DeltaCodes::DeltaCodes(){}
 

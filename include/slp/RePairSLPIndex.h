@@ -33,20 +33,26 @@
 #include <algorithm>
 #include <stdio.h>
 
-#include "RePair/RePair.h"
-#include "BinRel/BinaryRelation.h"
-#include "BinRel/Point.h"
-#include "BinRel/RuleTrav.h"
-#include "BinRel/FullQuery.h"
-#include "Utils/SuffixArray.h"
-#include "Utils/deltacodes.h"
-#include "Samplings/sampling.h"
+#include <RePair/RePair.h>
+#include <BinRel/BinaryRelation.h>
+#include <BinRel/Point.h>
+#include <BinRel/RuleTrav.h>
+#include <BinRel/FullQuery.h>
+#include <Utils/SuffixArray.h>
+#include <Utils/deltacodes.h>
+#include <Samplings/sampling.h>
 
 #include <factorization.h>
 #include <factorization_var.h>
 #include <PermutationBuilder.h>
 
 using namespace cds_utils;
+
+typedef std::vector<std::pair<uint, uint>> rvect;
+typedef std::vector<uint> lvect;
+
+
+
 
 namespace cds_static
 {
@@ -57,6 +63,7 @@ namespace cds_static
 	 *
 	 *   @author Miguel A. Martinez-Prieto
 	 */
+
 	class RePairSLPIndex
 	{	
 		static const size_t PROOF = 100;
@@ -72,9 +79,11 @@ namespace cds_static
 			RePairSLPIndex();
 
 			void build(uchar *text, uint length, uint sampling_length, char *filename);
+			void build(uchar *text, uint length, uint sampling_length, char *filename, std::fstream &in_grammar, std::fstream & in_first_rule);
+			
 			int save();
 			static int load(char *filename, RePairSLPIndex **rpi);
-
+			static int load(const int & AA,char *filename, RePairSLPIndex **rpi);
 			unsigned int size();
 				
 			unsigned int count(uchar *pattern, uint length);
@@ -105,6 +114,14 @@ namespace cds_static
 			Sampling *reverseSamp;		// Sampling for the reverse grammar.
 			Sampling *sequenceSamp;		// Sampling for the compressed sequence.
 
+			void buildSamplingsOwn(uint qsampling);
+
+
+			uint calc_len(const uint &X, rvect &D, lvect &L, const int & t);
+
+			void 
+			extractCharsDirectNoSamplesOwn(uint rule, uint len, uint chars, uchar *sample);
+			
 			bool 
 			static sorting(Rule i, Rule j)
 			{

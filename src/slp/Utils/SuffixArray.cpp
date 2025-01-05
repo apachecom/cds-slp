@@ -1,4 +1,4 @@
-#include "SuffixArray.h"
+#include <SuffixArray.h>
 
 SuffixArray::SuffixArray()
 {
